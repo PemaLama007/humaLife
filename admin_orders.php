@@ -71,7 +71,9 @@ if(isset($_GET['delete'])){
             <select name="update_payment">
                <option value="" selected disabled><?php echo $fetch_orders['payment_status']; ?></option>
                <option value="pending">Pending</option>
+               <option value="cancel">Cancel</option>
                <option value="completed">Completed</option>
+
             </select>
             <input type="submit" value="update" name="update_order" class="option-btn">
             <a href="admin_orders.php?delete=<?php echo $fetch_orders['id']; ?>" onclick="return confirm('delete this order?');" class="delete-btn">delete</a>
@@ -86,12 +88,6 @@ if(isset($_GET['delete'])){
    </div>
 
 </section>
-
-
-
-
-
-
 
 
 

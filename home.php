@@ -3,11 +3,11 @@
 include 'config.php';
 session_start();
 
-// $user_id = $_SESSION['user_id'];
+$user_id = $_SESSION['user_id'];
 
-// if(!isset($user_id)){
-//    header('location:login.php');
-// }
+if(!isset($user_id)){
+   header('location:login.php');
+}
 
 
 if(isset($_POST['add_to_cart'])){
@@ -86,7 +86,6 @@ if(isset($_POST['add_to_cart'])){
       }
       ?>
    </div>
-
    <div class="load-more" style="margin-top: 2rem; text-align:center">
       <a href="shop.php" class="option-btn">load more</a>
    </div>
