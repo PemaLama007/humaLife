@@ -15,6 +15,7 @@ if(isset($_POST['add_to_cart'])){
    $product_name = $_POST['product_name'];
    $product_price = $_POST['product_price'];
    $product_image = $_POST['product_image'];
+   $product_quantity = $_POST['product_quantity'];
 
    $check_cart_numbers = mysqli_query($conn, "SELECT * FROM `cart` WHERE name = '$product_name' AND user_id = '$user_id'") or die('query failed');
 
@@ -73,6 +74,7 @@ if(isset($_POST['add_to_cart'])){
       <input type="hidden" name="product_name" value="<?php echo $fetch_products['name']; ?>">
       <input type="hidden" name="product_price" value="<?php echo $fetch_products['price']; ?>">
       <input type="hidden" name="product_image" value="<?php echo $fetch_products['image']; ?>">
+      <input type="hidden" name="product_quantity" value="<?php echo $fetch_products['quantity']; ?>">
       <input type="submit" value="add to cart" name="add_to_cart" class="btn">
      </form>
       <?php

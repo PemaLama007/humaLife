@@ -145,8 +145,11 @@ section{
 }
 
 .header{
-   position: sticky;
-   top:0; left:0; right:0;
+   position: fixed;
+   width: 250px;
+   padding-top: 50px;
+   height: 100vh;
+   top:0; left:0; right:400px; bottom: 0;
    z-index: 1000;
    background-color: var(--white);
    box-shadow: var(--box-shadow);
@@ -156,7 +159,7 @@ section{
    display: flex;
    align-items: center;
    padding:2rem;
-   justify-content: space-between;
+   flex-direction: column;
    position: relative;
    max-width: 1200px;
    margin:0 auto;
@@ -170,20 +173,29 @@ section{
 .header .flex .logo span{
    color:var(--purple);
 }
+.header .flex .navbar{
+   display: flex;
+   text-align: start;
+   flex-direction: column;
+   padding-top: 50px;
+   gap: 20px;
+}
 
 .header .flex .navbar a{
    margin:0 1rem;
-   font-size: 2rem;
+   font-size: 1.5rem;
    color:var(--black);
 }
 
 .header .flex .navbar a:hover{
    color:var(--purple);
 }
-
+.header .flex .icons {
+   
+}
 .header .flex .icons div{
-   margin-left: 1.5rem;
-   font-size: 2.5rem;
+   font-size: 4rem;
+   margin-top: 100px;
    cursor: pointer;
    color:var(--black);
 }
@@ -194,14 +206,14 @@ section{
 
 .header .flex .account-box{
    position: absolute;
-   top:120%; right:2rem;
-   width: 30rem;
+   top:40%; right:1rem;left: 1rem;
+   width: 25rem;
    box-shadow: var(--box-shadow);
    border-radius: .5rem;
    padding:2rem;
    text-align: center;
    border-radius: .5rem;
-   border:var(--border);
+   border: 2px solid rgba(0, 0, 0, 0.39);
    background-color: var(--white);
    display: none;
    animation:fadeIn .2s linear;
@@ -242,7 +254,12 @@ section{
 #menu-btn{
    display: none;
 }
-
+.dashboard {
+   width: 80%;
+   position: absolute;
+   right: 0;
+   top: 0;
+}
 .dashboard .box-container{
    display: grid;
    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
@@ -262,7 +279,8 @@ section{
 }
 
 .dashboard .box-container .box h3{
-   font-size: 5rem;
+   font-size: 3rem;
+   font-weight: 400;
    color:var(--black); 
 }
 
@@ -307,8 +325,11 @@ section{
 
 .show-products .box-container{
    display: grid;
-   grid-template-columns: repeat(auto-fit, 30rem);
-   justify-content: center;
+   width: 700px;
+   position: relative;right: 0;
+   top: 0;
+   grid-template-columns: repeat(3, 1fr);
+   gap: 10px;
    gap:1.5rem;
    max-width: 1200px;
    margin:0 auto;
@@ -329,7 +350,7 @@ section{
 }
 
 .show-products .box-container .box img{
-   height: 25rem;
+   height: 20rem;
 }
 
 .show-products .box-container .box .name{
@@ -343,7 +364,20 @@ section{
    font-size: 2.5rem;
    color:var(--red);
 }
-
+.show-products .box-container .box .quantity {
+   color: #ffffff;
+   font-size: 2rem;
+   padding: 10px;
+   border-radius: 5px;
+   align-self: center;
+   display: flex;
+   background: #959494;
+   justify-content: space-between;
+   align-items: center;
+}
+.show-products .box-container .box .quantity .qty-num {
+   color: red;
+}
 .edit-product-form{
    min-height: 100vh;
    background-color: rgba(0,0,0,.7);
@@ -353,7 +387,8 @@ section{
    padding:2rem;
    overflow-y: scroll;
    position: fixed;
-   top:0; left:0; 
+   top:0; left:0;
+   height: 600px; 
    z-index: 1200;
    width: 100%;
 }
@@ -490,23 +525,6 @@ section{
 .messages .box-container .box .delete-btn{
    margin-top: 0;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

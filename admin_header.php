@@ -12,22 +12,24 @@ if(isset($message)){
 ?>
 
 <header class="header">
-
+   <div class="close">
+      X
+   </div>
    <div class="flex">
 
-      <a href="admin_page.php" class="logo">Admin<span>Panel</span></a>
+      <a href="admin_page.php" class="logo">Huma<span>Admin</span></a>
 
       <nav class="navbar">
-         <a href="admin_page.php">Home</a>
-         <a href="admin_products.php">Products</a>
-         <a href="admin_orders.php">Orders</a>
-         <a href="admin_users.php">Users</a>
-         <a href="admin_contacts.php">Messages</a>
+         <a href="admin_page.php"><i class="fa-solid fa-rectangle-list"></i> Dashboard</a>
+         <a href="admin_products.php"><i class="fa-solid fa-boxes-stacked"></i> Products</a>
+         <a href="admin_orders.php"><i class="fa-solid fa-box"></i> Orders</a>
+         <a href="admin_users.php"><i class="fa-solid fa-user"></i> Users</a>
+         <a href="admin_contacts.php"><i class="fa-solid fa-envelope"></i> Messages</a>
       </nav>
 
       <div class="icons">
          <div id="menu-btn" class="fas fa-bars"></div>
-         <div id="user-btn" class="fas fa-user"></div>
+         <div id="user-btn" class="fas fa-user"><i class="fa-solid fa-right-from-bracket" style="padding-left: 1rem;"></i></div>
       </div>
 
       <div class="account-box">

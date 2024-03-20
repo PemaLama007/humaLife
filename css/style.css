@@ -40,6 +40,16 @@
    background-color: var(--purple);
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Firefox */
+input[type=number] {
+   -moz-appearance: textfield;
+ }
+
 html{
    font-size: 62.5%;
    overflow-x: hidden;
@@ -238,7 +248,7 @@ section{
 }
 
 .header .header-2{
-   background-color: #d0f1fe;
+   background-color: white;
    box-shadow: var(--box-shadow);
 }
 
@@ -284,8 +294,16 @@ section{
 .header .header-2 .flex .logo{
    max-width: 500px;
    max-height: 140px;
+   color: #3b7186;
+   font-weight: 600;
+   font-family: "Nunito", sans-serif;
+   font-size: xx-large;
 }
-
+.header .header-2 .flex .logo .life{
+   font-weight: 400;
+   color: #16a5dd;
+   font-family: "Nunito Sans", sans-serif;
+}
 .header .header-2 .flex .navbar a{
    margin:0 1rem;
    font-size: 2rem;
@@ -294,7 +312,7 @@ section{
 
 .header .header-2 .flex .navbar a:hover{
    color:var(--purple);
-   text-decoration: underline;
+   text-decoration: underline #16a5dd;
 }
 
 .header .header-2 .flex .icons > *{
@@ -315,7 +333,7 @@ section{
 .header .header-2 .flex .user-box{
    position: absolute;
    top:120%; right:2rem;
-   background-color: #ade2d3;
+   background-color: #bcffd7;
    border-radius: .5rem;
    box-shadow: var(--box-shadow);
    border:var(--border);
@@ -388,12 +406,12 @@ section{
    box-shadow: var(--box-shadow);
    padding:2rem;
    text-align: center;
-   border:var(--border);
+   border: 1px solid rgba(67, 67, 67, 0.258);
    position: relative;
 }
 
 .products .box-container .box .image{
-   height: 30rem;
+   width: 100%;
 }
 
 .products .box-container .box .name{
@@ -596,9 +614,9 @@ section{
 
 .contact form{
    margin:0 auto;
+   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
    background-color: #a5e5fb;
    border-radius: .5rem;
-   border:var(--border);
    padding:2rem;
    max-width: 50rem;
    margin:0 auto;
@@ -615,14 +633,12 @@ section{
 .contact form .box{
    margin:1rem 0;
    width: 100%;
-   border:var(--border);
-   background-color: #a5e5fb;
+   background-color: #ffffff;
    padding:1.2rem 1.4rem;
    font-size: 1.8rem;
    color:var(--black);
    border-radius: .5rem;
 }
-
 .contact form textarea{
    height: 20rem;
    resize: none;
@@ -642,10 +658,24 @@ section{
    text-align: center;
    padding:2rem;
    border-radius: .5rem;
-   background-color:#a5e5fb;
+   background-color:#eef7fa;
    box-shadow: var(--box-shadow);
    position: relative;
-   border:var(--border);
+   border: 1px solid black;
+}
+.cart{
+   position: absolute;
+}
+.cart-item{
+   position: relative;
+   top: -15px;
+   text-align: center;
+   left: 23px;
+   font-size: 1.5rem;
+   color: rgb(255, 255, 255);
+   padding: 3px 5px;
+   background-color: var(--red);
+   border-radius: 30px;
 }
 
 .shopping-cart .box-container .box .fa-times{
@@ -665,7 +695,7 @@ section{
 }
 
 .shopping-cart .box-container .box img{
-   height: 30rem;
+   width: 100%;
 }
 
 .shopping-cart .box-container .box .name{

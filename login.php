@@ -2,7 +2,11 @@
 
 include 'config.php';
 session_start();
-
+if(isset($_SESSION['user_id'])) {
+   // Redirect to home page
+   header("Location: home.php");
+   exit();
+}
 if(isset($_POST['submit'])){
 
    $email = mysqli_real_escape_string($conn, $_POST['email']);
@@ -70,7 +74,7 @@ if(isset($message)){
 
 <div class="form-container">
    <form action="" method="post">
-      <a href="home.php">Home</a>
+      <a href="./home.php">Home</a>
       <h3>Login now</h3>
       <input type="email" name="email" placeholder="Enter your email" required class="box">
       <input type="password" name="password" placeholder="Enter your password" required class="box">
