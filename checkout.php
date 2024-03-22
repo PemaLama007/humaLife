@@ -99,22 +99,22 @@ if(isset($_POST['order_btn'])){
 <section class="checkout">
 
    <form action="" method="post">
-      <h3>place your order</h3>
+      <h3>Place Your Order</h3>
       <div class="flex">
          <div class="inputBox">
-            <span>your name :</span>
-            <input type="text" name="name" required placeholder="enter your name">
+            <span>Your name :</span>
+            <input type="text" name="name" required placeholder="Enter your name">
          </div>
          <div class="inputBox">
-            <span>your number :</span>
-            <input type="number" name="number" required placeholder="enter your number">
+            <span>Your number :</span>
+            <input type="number" name="number" required placeholder="Enter your number">
          </div>
          <div class="inputBox">
-            <span>your email :</span>
-            <input type="email" name="email" required placeholder="enter your email">
+            <span>Your email :</span>
+            <input type="email" name="email" required placeholder="Enter your email">
          </div>
          <div class="inputBox">
-            <span>payment method :</span>
+            <span>Payment method :</span>
             <select name="method">
                <option value="cash on delivery">cash on delivery</option>
                <option value="credit card">credit card</option>

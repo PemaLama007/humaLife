@@ -62,7 +62,7 @@ if(!isset($user_id)){
 
 </section>
 
-<section class="reviews">
+<!-- <section class="reviews">
 
    <h1 class="title">client's reviews</h1>
 
@@ -148,7 +148,7 @@ if(!isset($user_id)){
 
    </div>
 
-</section>
+</section> -->
 
 <?php include 'footer.php'; ?>
 

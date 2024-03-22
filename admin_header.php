@@ -12,9 +12,6 @@ if(isset($message)){
 ?>
 
 <header class="header">
-   <div class="close">
-      X
-   </div>
    <div class="flex">
 
       <a href="admin_page.php" class="logo">Huma<span>Admin</span></a>
@@ -29,12 +26,12 @@ if(isset($message)){
 
       <div class="icons">
          <div id="menu-btn" class="fas fa-bars"></div>
-         <div id="user-btn" class="fas fa-user"><i class="fa-solid fa-right-from-bracket" style="padding-left: 1rem;"></i></div>
+         <div id="user-btn" class=""><i class="fa-solid fa-right-from-bracket"></i></div>
       </div>
 
       <div class="account-box">
-         <p>username : <span><?php echo $_SESSION['admin_name']; ?></span></p>
-         <p>email : <span><?php echo $_SESSION['admin_email']; ?></span></p>
+         <p>Username : <span><?php echo $_SESSION['admin_name']; ?></span></p>
+         <p>Email : <span><?php echo $_SESSION['admin_email']; ?></span></p>
          <a href="logout.php" class="delete-btn">logout</a>
       </div>
 

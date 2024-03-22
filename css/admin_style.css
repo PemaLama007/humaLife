@@ -104,7 +104,6 @@ section{
 .delete-btn,
 .white-btn{
    display: inline-block;
-   margin-top: 1rem;
    padding:1rem 3rem;
    cursor: pointer;
    color:var(--white);
@@ -146,12 +145,12 @@ section{
 
 .header{
    position: fixed;
-   width: 250px;
+   width: 220px;
    padding-top: 50px;
    height: 100vh;
    top:0; left:0; right:400px; bottom: 0;
    z-index: 1000;
-   background-color: var(--white);
+   background: #393C63;
    box-shadow: var(--box-shadow);
 }
 
@@ -167,12 +166,16 @@ section{
  
 .header .flex .logo{
    font-size: 2.5rem;
-   color:var(--black);
+   color:var(--white);
+}
+.header .flex .logo:hover{
+   color: var(--purple);
 }
 
 .header .flex .logo span{
    color:var(--purple);
 }
+
 .header .flex .navbar{
    display: flex;
    text-align: start;
@@ -184,15 +187,14 @@ section{
 .header .flex .navbar a{
    margin:0 1rem;
    font-size: 1.5rem;
-   color:var(--black);
+   color: white;
+
 }
 
 .header .flex .navbar a:hover{
    color:var(--purple);
 }
-.header .flex .icons {
-   
-}
+
 .header .flex .icons div{
    font-size: 4rem;
    margin-top: 100px;
@@ -218,7 +220,12 @@ section{
    display: none;
    animation:fadeIn .2s linear;
 }
-
+#user-btn{
+   color: #8689ab;
+}
+#user-btn:hover{
+   color: var(--purple);
+}
 .header .flex .account-box.active{
    display: inline-block;
 }
@@ -262,9 +269,11 @@ section{
 }
 .dashboard .box-container{
    display: grid;
-   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-   gap:1.5rem;
+   grid-template-columns: repeat(minmax(25rem, 1fr),2);
+   gap: 3px;
+   border: 2px solid rgba(128, 128, 128, 0.26);
    max-width: 1200px;
+   border-radius: 5px;
    margin:0 auto;
    align-items: flex-start;
 }
@@ -274,24 +283,21 @@ section{
    padding:2rem;
    background-color: var(--white);
    box-shadow: var(--box-shadow);
-   border:var(--border);
    text-align: center;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
 }
 
 .dashboard .box-container .box h3{
-   font-size: 3rem;
+   font-size: 2rem;
    font-weight: 400;
    color:var(--black); 
 }
 
 .dashboard .box-container .box p{
-   margin-top: 1.5rem;
-   padding:1.5rem;
-   background-color: var(--light-bg);
    color:var(--purple);
    font-size: 2rem;
-   border-radius: .5rem;
-   border:var(--border);
 }
 
 .add-products form{
@@ -300,8 +306,7 @@ section{
    padding:2rem;
    text-align: center;
    box-shadow: var(--box-shadow);
-   border:var(--border);
-   max-width: 50rem;
+   max-width: 45rem;
    margin:0 auto;
 }
 
@@ -320,7 +325,7 @@ section{
    padding:1.2rem 1.4rem;
    color:var(--black);
    font-size: 1.8rem;
-   border:var(--border);
+   border: 1px solid rgba(128, 128, 128, 0.212);
 }
 
 .show-products .box-container{
@@ -328,12 +333,12 @@ section{
    width: 700px;
    position: relative;right: 0;
    top: 0;
-   grid-template-columns: repeat(3, 1fr);
+   grid-template-columns: repeat(1, 1fr);
    gap: 10px;
    gap:1.5rem;
    max-width: 1200px;
    margin:0 auto;
-   align-items: flex-start;
+   align-items: flex-center;
 }
 
 .show-products{
@@ -341,42 +346,57 @@ section{
 }
 
 .show-products .box-container .box{
-   text-align: center;
    padding:2rem;
+   display: flex;
+   align-items: center;
+   gap: 10px;
    border-radius: .5rem;
-   border:var(--border);
    box-shadow: var(--box-shadow);
    background-color: var(--white);
 }
 
 .show-products .box-container .box img{
-   height: 20rem;
+   max-height: 15rem;
+   max-width: 15rem;
+   width: 100%;
+}
+.show-products .box-container .box .update-delete{
+   max-width: 10rem;
+}
+.show-products .box-container .box .update-delete .option-btn{
+   width: 100%;
+}
+.show-products .box-container .box .update-delete .delete-btn{
+   width: 100%;
 }
 
 .show-products .box-container .box .name{
    padding:1rem 0;
-   font-size: 2rem;
+   text-align: start;
+   font-size: 1.5rem;
    color:var(--black);
+   max-width: 20rem;
+   width: 20rem;
 }
 
 .show-products .box-container .box .price{
    padding:1rem 0;
-   font-size: 2.5rem;
+   font-size: 1.8rem;
    color:var(--red);
 }
 .show-products .box-container .box .quantity {
-   color: #ffffff;
-   font-size: 2rem;
-   padding: 10px;
+   color: #313131;
+   font-size: 1.5rem;
+   padding: 5px;
+   text-align: center;
    border-radius: 5px;
-   align-self: center;
-   display: flex;
-   background: #959494;
-   justify-content: space-between;
-   align-items: center;
+   margin-bottom: 5px;
 }
 .show-products .box-container .box .quantity .qty-num {
    color: red;
+}
+.btn, .option-btn, .delete-btn, .white-btn{
+   margin-bottom: 5px;
 }
 .edit-product-form{
    min-height: 100vh;
@@ -416,72 +436,96 @@ section{
    color:var(--black);
    width: 100%;
 }
-
 .orders .box-container{
-   display: grid;
-   grid-template-columns: repeat(auto-fit, 30rem);
-   justify-content: center;
    gap:1.5rem;
    max-width: 1200px;
    margin:0 auto;
    align-items: flex-start;
 }
-
+.orders {
+   width: 81.5%;
+  position: absolute;
+  right: 0;
+}
 .orders .box-container .box{
    background-color: var(--white);
-   padding:2rem;
-   border:var(--border);
+   padding: 2rem;
    box-shadow: var(--box-shadow);
    border-radius: .5rem;
+   margin-bottom: 20px;
 }
 
-.orders .box-container .box p{
-   padding-bottom: 1rem;
-   font-size: 2rem;
+.orders .box-container .box ul{
+   list-style: none;
+   display: flex;
+   gap: 5px;
+
+   
+}
+.orders .box-container .box ul li{
+   padding-right: 1rem;
+   font-size: 14px;
+
    color:var(--light-color);
 }
+.orders .box-container .box ul li p{
+   color: #393C63;
+   font-weight: 500;
+   width: 108%;
+}
 
-.orders .box-container .box p span{
+.orders .box-container .box ul li span{
    color:var(--purple);
+   padding-top: 1rem;
+   max-width: 300px;
+   display: inline-block;
+   overflow-y: scroll;
+   max-height: 100px;
+   font-size: 12px;
 }
 
 .orders .box-container .box form{
    text-align: center;
+   display: flex;
+   align-items: center;
+   gap: 10px;
 }
 
 .orders .box-container .box form select{
    border-radius: .5rem;
    margin:.5rem 0;
-   width: 100%;
+   width: 20%;
    background-color: var(--light-bg);
    border:var(--border);
    padding:1.2rem 1.4rem;
    font-size: 1.8rem;
+   height: 100%;
    color:var(--black);
 }
 
 .users .box-container{
    display: grid;
-   grid-template-columns: repeat(auto-fit, 30rem);
+   grid-template-rows: repeat(auto-fit, 10rem);
    justify-content: center;
-   gap:1.5rem;
    max-width: 1200px;
-   margin:0 auto;
    align-items: flex-start;
 }
 
 .users .box-container .box{
    background-color: var(--white);
-   padding:2rem;
+   padding: 1rem;
+   display: flex;
+   gap: 20px;
    border:var(--border);
    box-shadow: var(--box-shadow);
    border-radius: .5rem;
-   text-align: center;
 }
-
+.btn:hover, .option-btn:hover, .delete-btn:hover{
+   background: #393C63;
+}
 .users .box-container .box p{
    padding-bottom: 1.5rem;
-   font-size: 2rem;
+   font-size: 1.5rem;
    color:var(--light-color);
 }
 
@@ -491,6 +535,9 @@ section{
 
 .users .box-container .box .delete-btn{
    margin-top: 0;
+}
+.btn, .option-btn, .delete-btn, .white-btn{
+   font-size: 1.5rem;
 }
 
 .messages .box-container{

@@ -3,8 +3,7 @@
 include 'config.php';
 session_start();
 if(isset($_SESSION['user_id'])) {
-   // Redirect to home page
-   header("Location: home.php");
+   header("Location: login.php");
    exit();
 }
 if(isset($_POST['submit'])){
@@ -58,7 +57,6 @@ if(isset($_POST['submit'])){
 
 </head>
 <body>
-
 <?php
 if(isset($message)){
    foreach($message as $message){
@@ -74,7 +72,7 @@ if(isset($message)){
 
 <div class="form-container">
    <form action="" method="post">
-      <a href="./home.php">Home</a>
+      <a href="home.php" id="home">huma<span class="life">Life</span></a>
       <h3>Login now</h3>
       <input type="email" name="email" placeholder="Enter your email" required class="box">
       <input type="password" name="password" placeholder="Enter your password" required class="box">

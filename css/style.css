@@ -184,23 +184,29 @@ section{
 
 .form-container{
    min-height: 100vh;
-   background-image: url(bc.png);
    background-size: cover;
    background-position: center;
    display: flex;
+   background-image: url(bc.png);
    align-items: center;
    justify-content: center;
    padding:2rem;
    background-repeat: no-repeat;
 }
-
+#home{
+   font-size: 5rem;
+   color: #4744ad;
+   text-decoration: underline;
+}
+#home:hover{
+   color: white;
+}
 .form-container form{
    padding:2rem;
    width: 50rem;
    border-radius: .5rem;
    box-shadow: var(--box-shadow);
    border:var(--border);
-   background-color: var(--white);
    text-align: center;
    /*background-image: url(bc.png);*/
    background-color: #98c1f947;
@@ -294,7 +300,7 @@ section{
 .header .header-2 .flex .logo{
    max-width: 500px;
    max-height: 140px;
-   color: #3b7186;
+   color: #43bd94;
    font-weight: 600;
    font-family: "Nunito", sans-serif;
    font-size: xx-large;
@@ -473,7 +479,11 @@ section{
    font-size: 1.7rem;
    color:var(--light-color);
 }
-
+summary{
+   background: var(--light-color);
+   width: 50px;
+   color: white;
+}
 .home-contact{
    background-color: var(--black);
 }
@@ -852,16 +862,16 @@ section{
 }
 
 .placed-orders .box-container .box{
-   flex:1 1 40rem;
    border-radius: .5rem;
-   padding:2rem;
+   margin-left: 130px;
    border:var(--border);
    background-color: var(--light-bg);
    padding:1rem 2rem;
+   width: 80%;
 }
 
 .placed-orders .box-container .box p{
-   padding:1rem 0;
+   padding:.2rem 0;
    font-size: 2rem;
    color:var(--light-color);
 }
