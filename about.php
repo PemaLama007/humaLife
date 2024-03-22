@@ -78,7 +78,7 @@ if(!isset($user_id)){
             <i class="fas fa-star"></i>
             <i class="fas fa-star-half-alt"></i>
          </div>
-         <h3>john deo</h3>
+         <h3>Ram</h3>
       </div>
 
       <div class="box">
@@ -91,7 +91,7 @@ if(!isset($user_id)){
             <i class="fas fa-star"></i>
             <i class="fas fa-star-half-alt"></i>
          </div>
-         <h3>john deo</h3>
+         <h3>Aarati</h3>
       </div>
 
       <div class="box">
@@ -104,7 +104,7 @@ if(!isset($user_id)){
             <i class="fas fa-star"></i>
             <i class="fas fa-star-half-alt"></i>
          </div>
-         <h3>john deo</h3>
+         <h3>krishna</h3>
       </div>
 
       <div class="box">
@@ -117,7 +117,7 @@ if(!isset($user_id)){
             <i class="fas fa-star"></i>
             <i class="fas fa-star-half-alt"></i>
          </div>
-         <h3>john deo</h3>
+         <h3>Gita</h3>
       </div>
 
       <div class="box">
@@ -130,7 +130,7 @@ if(!isset($user_id)){
             <i class="fas fa-star"></i>
             <i class="fas fa-star-half-alt"></i>
          </div>
-         <h3>john deo</h3>
+         <h3>Dipendra</h3>
       </div>
 
       <div class="box">
@@ -143,7 +143,7 @@ if(!isset($user_id)){
             <i class="fas fa-star"></i>
             <i class="fas fa-star-half-alt"></i>
          </div>
-         <h3>john deo</h3>
+         <h3>Asha</h3>
       </div>
 
    </div>
