@@ -112,7 +112,7 @@ if (isset($_POST['update_product'])) {
    <h3>Add Product</h3>
    <input type="text" name="name" class="box" placeholder="Enter product name" required>
    <input type="number" min="0" name="price" class="box" placeholder="Enter product price" required>
-   <input type="number" min="1" name="quantity" class="box" placeholder="Enter product quantity" required>
+   <input type="number" min="0" name="quantity" class="box" placeholder="Enter product quantity" required>
    <input type="text" name="company_name" class="box" placeholder="Company name" required>
    <input type="file" name="image" accept="image/jpg, image/jpeg, image/png" class="box" required>
    <input type="submit" value="add product" name="add_product" class="btn">
