@@ -195,12 +195,14 @@ section{
 }
 #home{
    font-size: 5rem;
-   color: #4744ad;
+   text-decoration: none;
+   cursor: pointer;
+   color: #16A5DD;
+}
+#home:hover {
    text-decoration: underline;
 }
-#home:hover{
-   color: white;
-}
+
 .form-container form{
    padding:2rem;
    width: 50rem;
