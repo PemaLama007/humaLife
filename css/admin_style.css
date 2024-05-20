@@ -516,6 +516,7 @@ section{
    padding: 1rem;
    display: flex;
    gap: 20px;
+   margin: 2rem;
    border:var(--border);
    box-shadow: var(--box-shadow);
    border-radius: .5rem;

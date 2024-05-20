@@ -176,7 +176,7 @@ if (isset($_GET['update'])) {
             <input type="number" name="update_quantity" value="<?php echo $fetch_update['quantity']; ?>" min="0" class="box" required placeholder="Enter product quantity">
             <input type="file" class="box" name="update_image" accept="image/jpg, image/jpeg, image/png">
             <input type="submit" value="update" name="update_product" class="btn">
-            <input type="reset" value="cancel" id="close-update" class="option-btn">
+            <input type="reset" value="canceled" id="close-update" class="option-btn">
          </form>
 <?php
       }
