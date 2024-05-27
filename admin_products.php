@@ -31,8 +31,11 @@ if (isset($_POST['add_product'])) {
          if ($image_size > 2000000) {
             $message[] = 'image size is too large';
          } else {
-            move_uploaded_file($image_tmp_name, $image_folder);
-            $message[] = 'product added successfully!';
+            if (move_uploaded_file($image_tmp_name, $image_folder)) {
+                $message[] = 'product added successfully!';
+            } else {
+                $message[] = 'Failed to upload image!';
+            }
          }
       } else {
          $message[] = 'product could not be added!';
@@ -48,15 +51,15 @@ if (isset($_GET['delete'])) {
    mysqli_query($conn, "DELETE FROM `products` WHERE pid = '$delete_id'") or die('query failed');
    header('location:admin_products.php');
 }
-
 if (isset($_POST['update_product'])) {
 
    $update_p_id = $_POST['update_p_id'];
-   $update_name = $_POST['update_name'];
-   $update_price = $_POST['update_price'];
-   $update_quantity = $_POST['update_quantity'];
+   $update_name = mysqli_real_escape_string($conn, $_POST['update_name']);
+   $update_price = mysqli_real_escape_string($conn, $_POST['update_price']);
+   $update_quantity = mysqli_real_escape_string($conn, $_POST['update_quantity']);
 
-   mysqli_query($conn, "UPDATE `products` SET name = '$update_name', price = '$update_price', quantity = '$update_quantity' WHERE pid = '$update_p_id'") or die('query failed');
+   $update_query = "UPDATE `products` SET name = '$update_name', price = '$update_price', quantity = '$update_quantity' WHERE pid = '$update_p_id'";
+   mysqli_query($conn, $update_query) or die(mysqli_error($conn));
 
    $update_image = $_FILES['update_image']['name'];
    $update_image_tmp_name = $_FILES['update_image']['tmp_name'];
@@ -68,13 +71,18 @@ if (isset($_POST['update_product'])) {
       if ($update_image_size > 2000000) {
          $message[] = 'image file size is too large';
       } else {
-         mysqli_query($conn, "UPDATE `products` SET image = '$update_image' WHERE pid = '$update_p_id'") or die('query failed');
-         move_uploaded_file($update_image_tmp_name, $update_folder);
-         unlink('uploaded_img/' . $update_old_image);
+         $update_image_query = "UPDATE `products` SET image = '$update_image' WHERE pid = '$update_p_id'";
+         mysqli_query($conn, $update_image_query) or die(mysqli_error($conn));
+         if (move_uploaded_file($update_image_tmp_name, $update_folder)) {
+            unlink('uploaded_img/' . $update_old_image);
+         } else {
+            $message[] = 'Failed to upload updated image!';
+         }
       }
    }
 
    header('location:admin_products.php');
+
 }
 
 ?>
@@ -190,8 +198,6 @@ if (isset($_GET['update'])) {
       </div>
 
    </div>
-
-
 
    <!-- custom admin js file link  -->
    <script src="js/admin_script.js"></script>

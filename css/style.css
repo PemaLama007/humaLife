@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap');
 
 :root{
-   --purple:#000000;
+   --purple:#2931a9;
    --red:#c0392b;
    --orange:#f39c12;
    --black:#333;
@@ -412,7 +412,7 @@ section{
    border-radius: .5rem;
    background-color: var(--white);
    box-shadow: var(--box-shadow);
-   padding:2rem;
+   padding:1.2rem;
    text-align: center;
    border: 1px solid rgba(67, 67, 67, 0.258);
    position: relative;
@@ -424,7 +424,7 @@ section{
 
 .products .box-container .box .name{
    padding:1rem 0;
-   font-size: 2rem;
+   font-size: 1.5rem;
    color:var(--black);
 }
 
@@ -439,10 +439,10 @@ section{
 }
 
 .products .box-container .box .price{
-    right:9rem;
+   right:9rem;
    border-radius: .5rem;
    padding:1rem;
-   font-size: 2.5rem;
+   font-size: 2.1rem;
    color:var(--white);
    background-color: var(--red);
 }
@@ -973,6 +973,7 @@ summary{
    html{
       font-size: 55%;
    }
+
 
 }
 

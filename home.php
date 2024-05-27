@@ -3,12 +3,12 @@
 include 'config.php';
 session_start();
 
-$user_id = isset($_SESSION['user_id']);
-
-// if(!isset($user_id)){
-//    header('location:login.php');
-//    exit();
-// }
+if(isset($_SESSION['user_id'])){
+   $user_id = $_SESSION['user_id'];
+}else{
+   header('location:login.php');
+   exit();
+}
 
 
 if(isset($_POST['add_to_cart'])){
